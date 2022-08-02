@@ -1,0 +1,15 @@
+query GetPostsByType($type: Tipos) {
+  post(where: {type: $type}) {
+    slug
+    title
+    description
+    createdAt
+    type
+    content {
+      html
+    }
+    publishedBy {
+      name
+    }
+  }
+}

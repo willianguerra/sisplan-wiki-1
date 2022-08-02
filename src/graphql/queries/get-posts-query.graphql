@@ -1,0 +1,15 @@
+query GetAllPosts {
+  post(orderBy: publishedAt_DESC) {
+    slug
+    title
+    description
+    createdAt
+    content {
+      html
+    }
+    type
+    publishedBy {
+      name
+    }
+  }
+}

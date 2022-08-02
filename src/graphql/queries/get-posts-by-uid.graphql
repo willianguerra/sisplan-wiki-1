@@ -1,0 +1,11 @@
+query GetPostsById($uid: String) {
+  posts(where: {slug: $uid}) {
+    slug
+    title
+    description
+    createdAt
+    content {
+      html
+    }
+  }
+}
